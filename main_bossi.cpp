@@ -16,7 +16,7 @@ std::vector<double> conv(
 		//adesso faccio l'integrale
 		double sum_integral{0};
 		for(double t=i_start;t<i_stop;t+=step_size)
-			sum_integral+=f1(t)*f2(t-x)*step_size;	
+			sum_integral+=f1(t)*f2(x-t)*step_size;	
 		std::cout<<"somma integrale="<<sum_integral<<" posizione x="<<x<<std::endl;			
 		result.emplace_back(sum_integral);
 	}
